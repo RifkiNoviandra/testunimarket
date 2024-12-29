@@ -56,6 +56,8 @@ Route::post("/register",[UserController::class,'register'])->name('register');
 Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 Route::post("/review/{id}",[ReviewController::class,'create'])->name('review.create');
+Route::put("/review/update/{id}",[ReviewController::class,'update'])->name('review.update');
+Route::get("/review/delete/{id}",[ReviewController::class,'delete'])->name('review.delete');
 
 Route::get("/",[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class,'detail'])->name('product.detail');
